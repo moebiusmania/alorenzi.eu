@@ -1,6 +1,6 @@
 ---
 title: Ho sistemato i metadati delle foto di Google Takeout
-image: /media/posts/2025-03-31-sistemato-metadati-foto-google-takeout/image.jpg
+image: /posts/2025-03-31-sistemato-metadati-foto-google-takeout/image.jpg
 description: Pensavo fosse piú semplice e invece no.
 ---
 Dopo aver fatto l’upload di tutti i [video compressi](https://alorenzi.eu/2025/03/28/che-me-ne-faccio-dei-video.html) che avevo in giro su immich sono passato a richiedere a google tutto il mio archivio fotografico.

@@ -1,7 +1,7 @@
 ---
 title: Metto casa in vendita!
 description: Vendo il trilocale di Viale Sicilia 4 a Busto Arsizio, e ovviamente mi sono fatto il sito da solo
-image: /media/immobili/viale-sicilia/mosaic/esterno-IMG_20260824_143244466_HDR.jpg
+image: /immobili/viale-sicilia/carosello/esterno-IMG_20260824_143244466_HDR.jpg
 ---
 
 Dopo 39 anni passati a Busto Arsizio è arrivato il momento di cambiare aria!

@@ -1,7 +1,7 @@
 ---
 title: "Slipknot - 2025 Setlist"
 description: "Road to Rock Im Park"
-image: /media/posts/2025-rock-im-park/cover.jpg
+image: /posts/2025-rock-im-park/cover.jpg
 ---
 
 [Source](https://www.setlist.fm/setlists/slipknot-1bd6a5b4.html)

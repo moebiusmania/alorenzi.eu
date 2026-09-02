@@ -1,6 +1,6 @@
 ---
 title:  "Un nuovo altbot"
-image: /media/posts/2025-03-20-un-nuovo-altbot/risultato.jpg
+image: /posts/2025-03-20-un-nuovo-altbot/risultato.jpg
 description: "Ovvero, aggiornare la descrizione delle immagini automagicamente."
 ---
 
@@ -35,7 +35,7 @@ L'idea é un po' questa:
 * La traduco nella lingua desiderata
 * Aggiorno l'immagine
 
-![sequence Diagram](/media/posts/2025-03-20-un-nuovo-altbot/sequence_diagram.jpg)
+![sequence Diagram]({{ site.media_url }}/posts/2025-03-20-un-nuovo-altbot/sequence_diagram.jpg)
 
 Riporto anche in modalitá testuale per coerenza con l'argomento:
 
@@ -167,7 +167,7 @@ Ho fatto una foto del mio adorato Cthulhu e l'ho postata [sul mio account Mastod
 
 Dopo una falsa partenza il bot mi ha aggiunto la descrizione alla mia foto! 🎉
 
-![Una foto del risultato](/media/posts/2025-03-20-un-nuovo-altbot/risultato.jpg)
+![Una foto del risultato]({{ site.media_url }}/posts/2025-03-20-un-nuovo-altbot/risultato.jpg)
 
 ## Prossimi passi
 

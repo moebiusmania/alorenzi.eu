@@ -1,7 +1,7 @@
 ---
 title: Immich-FUSE
 description: Un progettino per montare immich come filesystem
-image: /media/posts/2025-04-13-immich-fuse/graph.jpg
+image: /posts/2025-04-13-immich-fuse/graph.jpg
 ---
 
 tl;dr: ho creato un filesystem in userspace (FUSE) per montare le immagini di Immich in una directory locale. [Questo é il repo](https://github.com/AlessandroLorenzi/immich-fuse).
@@ -14,13 +14,13 @@ Ora, con Immich, utilizzo il comando `immich upload -r /var/media/[....]/DCIM` p
 
 L'idea è: perché non montare Immich direttamente in una directory locale?
 
-![Grafico che spiega la mia idea](/media/posts/2025-04-13-immich-fuse/graph.jpg)
+![Grafico che spiega la mia idea]({{ site.media_url }}/posts/2025-04-13-immich-fuse/graph.jpg)
 
 Questo progetto è un Proof of Concept (POC), è in sola lettura, ma funziona! È possibile sfogliare le immagini di Immich per data, solo preferiti e cercando persone taggate.
 
 Peró funziona, questo é uno screenshot di Nautilus che mostra le foto di Immich:
 
-![screen delle foto in nautilus](/media/posts/2025-04-13-immich-fuse/nautilus.jpg)
+![screen delle foto in nautilus]({{ site.media_url }}/posts/2025-04-13-immich-fuse/nautilus.jpg)
 
 
 Nel [README](https://github.com/AlessandroLorenzi/immich-fuse) ci sono più dettagli implementativi.

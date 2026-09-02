@@ -18,8 +18,13 @@
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}A post about: {{ page.title }}{% endif %}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
-  <meta property="og:image" content="{{ site.url }}{% if page.image %}{{ page.image }}{% else %}/media/avatar.png{% endif %}" />
+  <meta property="og:image" content="{% if page.image %}{{ site.media_url }}{{ page.image }}{% else %}{{ site.media_url }}/avatar.png{% endif %}" />
   <meta name="fediverse:creator" content="@alorenzi@mastodon.uno">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}A post about: {{ page.title }}{% endif %}" />
+  <meta name="twitter:image" content="{% if page.image %}{{ site.media_url }}{{ page.image }}{% else %}{{ site.media_url }}/avatar.png{% endif %}" />
   
   {% if page.gpx %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />

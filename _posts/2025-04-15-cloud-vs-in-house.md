@@ -1,7 +1,7 @@
 ---
 title: Cloud vs In House
 description: Il viaggio di due aziende tra cloud e server personali
-image: /media/posts/2025-04-15-cloud-vs-in-house/meme.jpg
+image: /posts/2025-04-15-cloud-vs-in-house/meme.jpg
 ---
 
 Sto scrivendo un altro articolo che mi sta uscendo un rant lunghissimo. Visto che ci sto mettendo tre giorni causa deficit visivo (chi mi conosce sa), ho deciso di staccare e ampliare questo pezzo di storia.
@@ -23,7 +23,7 @@ Ho sempre avuto un server personale, prima un "server" in casa (un vecchio compu
 Un paio di anni fa ho iniziato ad **abbattere i costi** del cloud nella mia azienda. Mi sono accorto di quanti sprechi avevamo e - nonostante il lavoro fatto - ancora oggi ci sono costi intrinsechi non eliminabili.
 Ho quindi pensato a quanto ci costerebbe oggi l'infrastruttura se fossero state fatte scelte diverse e a quali sarebbero i costi di una migrazione.
 
-![Meme Left Exit 12 Off Ramp. Testo 1: "Cloud", Testo 2 "In House"](/media/posts/2025-04-15-cloud-vs-in-house/meme.jpg)
+![Meme Left Exit 12 Off Ramp. Testo 1: "Cloud", Testo 2 "In House"]({{ site.media_url }}/posts/2025-04-15-cloud-vs-in-house/meme.jpg)
 
 ## Il viaggio di Alpha e Sigma
 

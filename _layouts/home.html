@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Alessandro Lorenzi Homepage" />
+  <meta name="description" content="Alessandro Lorenzi - Atleta Rally Obedience con Fenny 🐶 - Platform Engineer @ Casavo" />
 
   <title>
     {% if page.title %} {{ page.title }} | {% endif %}Alessandro Lorenzi
@@ -11,14 +11,25 @@
   <link href="/media/site-screen.css" type="text/css" rel="stylesheet" media="screen" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="me" href="https://mastodon.uno/@alorenzi" />
+
+  <meta property="og:title" content="sito personale di Alessandro Lorenzi" />
+  <meta property="og:description" content="Alessandro Lorenzi - Atleta Rally Obedience con Fenny 🐶 - Platform Engineer @ Casavo" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ site.media_url }}/banner.jpg?w=1200&h=630&fit=crop&crop=focalpoint&auto=format,compress" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="sito personale di Alessandro Lorenzi" />
+  <meta name="twitter:description" content="Alessandro Lorenzi - Atleta Rally Obedience con Fenny 🐶 - Platform Engineer @ Casavo" />
+  <meta name="twitter:image" content="{{ site.media_url }}/banner.jpg?w=1200&h=630&fit=crop&crop=focalpoint&auto=format,compress" />
 </head>
 
 <body>
   <div class="profile-banner">
-    <img class="profile-banner-img" src="/media/banner.jpg" alt="Alessandro con il suo golden retriever a una gara di rally obedience" />
+    <img class="profile-banner-img" src="{{ site.media_url }}/banner.jpg?w=800&fit=crop&crop=focalpoint&auto=format,compress" alt="Alessandro con il suo golden retriever a una gara di rally obedience" />
     <div class="profile-banner-inner">
       <div class="profile-avatar">
-        <img src="/media/avatar-profile.jpg" alt="Alessandro Lorenzi" />
+        <img src="{{ site.media_url }}/avatar-profile.jpg?w=224&h=224&fit=crop&auto=format,compress" alt="Alessandro Lorenzi" />
       </div>
     </div>
   </div>

@@ -16,7 +16,12 @@
   <meta property="og:description" content="{{ listing.description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
-  <meta property="og:image" content="{{ site.url }}/media/immobili/{{ page.data_source | replace: '_', '-' }}/opengraph.jpg" />
+  <meta property="og:image" content="{{ site.media_url }}{{ listing.cover.src }}?w=1200&h=630&fit=crop&crop=focalpoint&auto=format,compress" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ listing.title }}" />
+  <meta name="twitter:description" content="{{ listing.description }}" />
+  <meta name="twitter:image" content="{{ site.media_url }}{{ listing.cover.src }}?w=1200&h=630&fit=crop&crop=focalpoint&auto=format,compress" />
 
   <script type="application/ld+json">
   {
@@ -58,7 +63,7 @@
     <a href="/">Alessandro Lorenzi</a>
   </div>
   <div class="mainbody">
-    <img class="property-cover" src="{{ listing.cover.src }}" alt="{{ listing.cover.alt }}" />
+    <img class="property-cover" src="{{ site.media_url }}{{ listing.cover.src }}?w=1000&h=440&fit=crop&crop=focalpoint&auto=format,compress" alt="{{ listing.cover.alt }}" />
 
     <header class="property-hero">
       <h1>{{ listing.title }}</h1>
@@ -101,8 +106,8 @@
       <h2>Foto</h2>
       <div class="property-gallery">
         {% for photo in listing.photos %}
-        <a data-fslightbox="gallery" href="{{ photo.full }}">
-          <img src="{{ photo.thumb }}" alt="{{ photo.alt }}" loading="lazy" />
+        <a data-fslightbox="gallery" href="{{ site.media_url }}{{ photo.src }}?w=1600&auto=format,compress">
+          <img src="{{ site.media_url }}{{ photo.src }}?w=320&h=130&fit=crop&auto=format,compress" alt="{{ photo.alt }}" loading="lazy" />
         </a>
         {% endfor %}
       </div>
@@ -133,9 +138,15 @@
     }).addTo(map);
     L.marker([{{ listing.geo.lat }}, {{ listing.geo.lng }}]).addTo(map);
 
+    var mediaUrl = "{{ site.media_url }}";
+    var scenes = {{ listing.tour.scenes | jsonify }};
+    Object.keys(scenes).forEach(function (id) {
+      scenes[id].panorama = mediaUrl + scenes[id].panorama + "?auto=format,compress";
+    });
+
     var tourViewer = pannellum.viewer('tour', {
       default: {{ listing.tour.default | jsonify }},
-      scenes: {{ listing.tour.scenes | jsonify }}
+      scenes: scenes
     });
   </script>
 

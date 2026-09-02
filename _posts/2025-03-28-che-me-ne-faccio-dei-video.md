@@ -1,6 +1,6 @@
 ---
 title:  "Che me ne faccio dei video?"
-image: /media/posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg
+image: /posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg
 description: "Uno script per comprimere tutti i video e mandarli a immich"
 ---
 
@@ -97,6 +97,6 @@ Adesso potete decidere cosa farne di foto volanti e backup vari.
 
 Io sto tenendo immich come servizio primario, ho dismesso shotwell dopo 10+ anni e relativi backup e faccio backup di immich.
 
-<a data-fslightbox href="/media/posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg">
-![Schermata delle statistiche](/media/posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg)
+<a data-fslightbox href="{{ site.media_url }}/posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg">
+![Schermata delle statistiche]({{ site.media_url }}/posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg)
 </a>

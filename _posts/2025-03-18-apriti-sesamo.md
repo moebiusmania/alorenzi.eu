@@ -1,6 +1,6 @@
 ---
 title:  "Apriti Sesamo"
-image: /media/posts/2025-03-18-apriti-sesamo/schema.jpg
+image: /posts/2025-03-18-apriti-sesamo/schema.jpg
 description: "Ovvero, come fa il cancello di casa ad aprirsi quando torno dalla passeggiata."
 ---
 
@@ -20,7 +20,7 @@ L'app e il widget sono carucci, non sempre peró super reattivi. Ogni tanto se t
 
 L'altro giorno mi é venuta questa idea, ma se si aprisse in automatico quando mi avvicino?
 
-![schema](/media/posts/2025-03-18-apriti-sesamo/schema.jpg)
+![schema]({{ site.media_url }}/posts/2025-03-18-apriti-sesamo/schema.jpg)
 
 > Si puó fare!
 
@@ -32,7 +32,7 @@ Da qui é stato abbastanza semplice configurare un trigger:
 * And if: (niente)
 * Then do: premi il bottone di ingresso
 
-![schema](/media/posts/2025-03-18-apriti-sesamo/screenshot.jpg)
+![schema]({{ site.media_url }}/posts/2025-03-18-apriti-sesamo/screenshot.jpg)
 
 ## Come sta andando
 

@@ -25,17 +25,9 @@
 </head>
 
 <body>
-  <div class="profile-banner">
-    <img class="profile-banner-img" src="{{ site.media_url }}/banner.jpg?w=800&fit=crop&crop=focalpoint&auto=format,compress" alt="Alessandro con il suo golden retriever a una gara di rally obedience" />
-    <div class="profile-banner-inner">
-      <div class="profile-avatar">
-        <img src="{{ site.media_url }}/avatar-profile.jpg?w=224&h=224&fit=crop&auto=format,compress" alt="Alessandro Lorenzi" />
-      </div>
-    </div>
-  </div>
+  {% include profile-header.html %}
   <div class="mainbody">
-    <h1 class="profile-name">Alessandro Lorenzi</h1>
-    <p class="profile-bio">Atleta Rally Obedience con Fenny 🐶 - Platform Engineer @ <a href="https://casavo.com" target="_blank">Casavo</a></p>
+    {% include profile-info.html %}
     <div id="content">{{ content }}</div>
 
     <h2 class="posts-heading">

@@ -68,6 +68,19 @@ a:focus-visible {
   font-size: 1em;
 }
 
+.mainbody blockquote {
+  margin: -0.8em 0 2.5em 0;
+  padding: 0 0 0 1em;
+  border-left: 3px solid #c2410c;
+  color: #666;
+  font-style: italic;
+  font-size: 1.15em;
+}
+
+.mainbody blockquote p {
+  margin: 0;
+}
+
 .highlight {
   padding: 0.01em 0.7em;
 }
@@ -169,6 +182,11 @@ a:focus-visible {
 .profile-name {
   margin: 0 0 0.2em;
   font-size: 1.6em;
+}
+
+.profile-name a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .profile-bio {

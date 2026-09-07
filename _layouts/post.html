@@ -38,6 +38,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
   {% endif %}
 
+  {% if page.gallery %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  {% endif %}
+
   {% include profile-header.html %}
   <div class="mainbody">
     {% include profile-info.html %}
@@ -73,12 +78,7 @@
 
     {% if page.gallery %}
     <h2>Gallery</h2>
-    <div class="gallery">
-      {% for image in page.gallery %}
-      
-      <a data-fslightbox href="{{image}}"><img src="{{image}}" style="width: 200px; height: 200px; object-fit: cover;" /></a>
-      {% endfor %}
-    </div>
+    {% include mosaic-gallery.html id="post" photos=page.gallery %}
     {% endif %}
 
     {% if page.author and page.date %}

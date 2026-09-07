@@ -1,0 +1,92 @@
+{% assign gid = include.id | default: "mosaic" %}
+{% assign media_url = include.media_url | default: "" %}
+{% assign thumb_params = include.thumb_params | default: "" %}
+{% assign full_params = include.full_params | default: "" %}
+<div class="mosaic" id="mosaic-{{ gid }}">
+  <div class="mosaic-sizer"></div>
+  <div class="mosaic-gutter-sizer"></div>
+  {% for photo in include.photos %}
+  {% assign photo_src = photo.src | default: photo %}
+  <div class="mosaic-item" onclick="mosaicOpen('{{ gid }}', {{ forloop.index0 }})">
+    <img src="{{ media_url }}{{ photo_src }}{{ thumb_params }}" alt="{{ photo.alt }}" loading="lazy" />
+  </div>
+  {% endfor %}
+</div>
+
+<div id="lightbox-{{ gid }}" class="lightbox">
+  <button class="close" onclick="mosaicClose('{{ gid }}')">&times;</button>
+  <button class="prev" onclick="mosaicDelta('{{ gid }}', -1)">&#8249;</button>
+  <img id="lightbox-{{ gid }}-img" src="" alt="" />
+  <button class="next" onclick="mosaicDelta('{{ gid }}', 1)">&#8250;</button>
+</div>
+
+<script>
+  (function () {
+    var gid = "{{ gid }}";
+    var photos = [
+      {% for photo in include.photos %}
+      {% assign photo_src = photo.src | default: photo %}
+      {
+        full: {{ media_url | append: photo_src | append: full_params | jsonify }},
+        alt: {{ photo.alt | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+    window.__mosaicGalleries = window.__mosaicGalleries || {};
+    window.__mosaicGalleries[gid] = { photos: photos, currentIndex: 0 };
+
+    var grid = document.getElementById('mosaic-' + gid);
+    var masonryInstance = null;
+    imagesLoaded(grid, function () {
+      masonryInstance = new Masonry(grid, {
+        itemSelector: '.mosaic-item',
+        columnWidth: '.mosaic-sizer',
+        gutter: '.mosaic-gutter-sizer',
+        percentPosition: true
+      });
+    });
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', function () {
+        if (masonryInstance) masonryInstance.layout();
+      });
+    }
+
+    document.getElementById('lightbox-' + gid).addEventListener('click', function (e) {
+      if (e.target === this) mosaicClose(gid);
+    });
+  })();
+
+  function mosaicUpdate(gid) {
+    var state = window.__mosaicGalleries[gid];
+    var photo = state.photos[state.currentIndex];
+    var img = document.getElementById('lightbox-' + gid + '-img');
+    img.src = photo.full;
+    img.alt = photo.alt;
+  }
+
+  function mosaicOpen(gid, index) {
+    window.__mosaicGalleries[gid].currentIndex = index;
+    mosaicUpdate(gid);
+    document.getElementById('lightbox-' + gid).classList.add('open');
+  }
+
+  function mosaicClose(gid) {
+    document.getElementById('lightbox-' + gid).classList.remove('open');
+  }
+
+  function mosaicDelta(gid, delta) {
+    var state = window.__mosaicGalleries[gid];
+    state.currentIndex = (state.currentIndex + delta + state.photos.length) % state.photos.length;
+    mosaicUpdate(gid);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    var openLightbox = document.querySelector('.lightbox.open');
+    if (!openLightbox) return;
+    var gid = openLightbox.id.replace(/^lightbox-/, '');
+    if (e.key === 'Escape') mosaicClose(gid);
+    if (e.key === 'ArrowLeft') mosaicDelta(gid, -1);
+    if (e.key === 'ArrowRight') mosaicDelta(gid, 1);
+  });
+</script>

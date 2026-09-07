@@ -58,6 +58,8 @@
 <body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
   <div class="head">
     <a href="/">Alessandro Lorenzi</a>
@@ -104,17 +106,18 @@
 
     <section>
       <h2>Foto</h2>
-      <div class="property-gallery">
-        {% for photo in listing.photos %}
-        <a data-fslightbox="gallery" href="{{ site.media_url }}{{ photo.src }}?w=1600&auto=format,compress">
-          <img src="{{ site.media_url }}{{ photo.src }}?w=320&h=130&fit=crop&auto=format,compress" alt="{{ photo.alt }}" loading="lazy" />
-        </a>
-        {% endfor %}
-      </div>
+      {% include mosaic-gallery.html id="property" photos=listing.photos media_url=site.media_url thumb_params="?w=480&auto=format,compress" full_params="?w=1600&auto=format,compress" %}
     </section>
 
     <section>
-      <h2>Virtual tour</h2>
+      <h2 class="tour-heading">
+        <svg class="icon-360" viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
+          <path d="M8 34c0-6 10.7-11 24-11s24 5 24 11" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          <path d="M48 27l7 1.5-3 6.5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          <text x="32" y="48" text-anchor="middle" font-size="17" font-weight="700" font-family="Space Grotesk, sans-serif" fill="currentColor">360°</text>
+        </svg>
+        Virtual tour 360°
+      </h2>
       <div id="tour" class="property-tour" style="height: 26em;"></div>
       <div class="scene-links">
         {% for scene in listing.tour.scene_links %}
@@ -149,13 +152,6 @@
       scenes: scenes
     });
   </script>
-
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.min.js"
-    integrity="sha512-03Ucfdj4I8Afv+9P/c9zkF4sBBGlf68zzr/MV+ClrqVCBXWAsTEjIoGCMqxhUxv1DGivK7Bm1IQd8iC4v7X2bw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
 </body>
 
 </html>

@@ -1,18 +1,7 @@
-media/post-images/task-failed-successfully.jpg filter=lfs diff=lfs merge=lfs -text
-media/post-images/fat.gif filter=lfs diff=lfs merge=lfs -text
-media/post-images/marco-tommasin-challenge.jpg filter=lfs diff=lfs merge=lfs -text
-media/post-images/putto-pipi.jpg filter=lfs diff=lfs merge=lfs -text
-media/wallpaper.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-18-apriti-sesamo/image.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-18-apriti-sesamo/schema.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-18-apriti-sesamo/screenshot.jpg filter=lfs diff=lfs merge=lfs -text
-media/**/**.jpg filter=lfs diff=lfs merge=lfs -text
-media/**/**.JPG filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-20-un-nuovo-altbot/risultato.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-20-un-nuovo-altbot/sequence_diagram.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-28-che-me-ne-faccio-dei-video/server_stats.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-03-31-sistemato-metadati-foto-google-takeout/image.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-04-13-immich-fuse/graph.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-04-13-immich-fuse/nautilus.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-04-15-cloud-vs-in-house/meme.jpg filter=lfs diff=lfs merge=lfs -text
-media/posts/2025-rock-im-park/cover.jpg filter=lfs diff=lfs merge=lfs -text
+# I media di immobili/ e posts/ non stanno in git: la sorgente e il bucket
+# S3 alorenzi-eu-media, popolato da `make sync-media` e servito via Imgix.
+# Vedi .gitignore.
+#
+# Restano in LFS solo gli asset di identita del sito, stabili nel tempo.
+media/avatar-profile.jpg filter=lfs diff=lfs merge=lfs -text
+media/banner.jpg filter=lfs diff=lfs merge=lfs -text

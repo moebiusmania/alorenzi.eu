@@ -1,3 +1,7 @@
 _site/
 .sass-cache/
 .jekyll-cache
+
+# Media serviti da S3/Imgix, non versionati: vedi .gitattributes e `make sync-media`
+media/immobili/
+media/posts/

@@ -81,7 +81,7 @@ specs:
       - label: "Tipo di riscaldamento"
         value: "Riscaldamento centralizzato"
       - label: "Classe Energetica"
-        value: "In attesa di certificazione"
+        value: "E - 202,56 kWh/m² anno"
   - group: "Condominio"
     items:
       - label: "Spese"
@@ -122,6 +122,10 @@ photos:
     alt: "Facciata del condominio anni '70 con balconi"
   - src: "/immobili/viale-sicilia/carosello/esterno-IMG_20260824_180645376_HDR.jpg"
     alt: "Vista della strada alberata su cui si affaccia il condominio"
+  - src: "/immobili/viale-sicilia/carosello/planimetria-1.jpg"
+    alt: "Planimetria catastale dell'appartamento al piano secondo e della cantina"
+  - src: "/immobili/viale-sicilia/carosello/planimetria-2.jpg"
+    alt: "Planimetria catastale del box auto al piano seminterrato"
 
 tour:
   default:

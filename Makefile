@@ -13,4 +13,4 @@ sync-media:
 	aws --profile alorenzi s3 sync _media/ s3://alorenzi-eu-media/
 
 deploy: build sync-media
-	rsync -av _site/ home:/srv/alorenzi_eu/
+	rsync -avc _site/ home:/srv/alorenzi_eu/

@@ -5,3 +5,4 @@ _site/
 # Media serviti da S3/Imgix, non versionati: vedi .gitattributes e `make sync-media`
 _media/immobili/
 _media/posts/
+_media/books/

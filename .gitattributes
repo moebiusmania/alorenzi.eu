@@ -1,5 +1,5 @@
 # _media/ e il mirror del bucket S3 alorenzi-eu-media, servito via Imgix.
-# immobili/ e posts/ non stanno in git (vedi .gitignore): la sorgente e S3.
+# immobili/, posts/ e books/ non stanno in git (vedi .gitignore): la sorgente e S3.
 # Restano in LFS solo gli asset di identita del sito, stabili nel tempo.
 _media/avatar-profile.jpg filter=lfs diff=lfs merge=lfs -text
 _media/banner.jpg filter=lfs diff=lfs merge=lfs -text

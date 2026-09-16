@@ -41,7 +41,14 @@
         <tr>
           <td>
             {% if entry.cover and entry.cover != "" %}
-            <img src="{{ entry.cover }}" alt="Copertina di {{ entry.title }}" class="catalog-cover" />
+            {% if entry.cover contains "://" %}
+            <img src="{{ entry.cover }}" alt="Copertina di {{ entry.title }}" class="catalog-cover" loading="lazy" />
+            {% else %}
+            {% assign cover_base = site.media_url | append: "/" | append: entry.cover %}
+            <img src="{{ cover_base }}?w=80&auto=format,compress"
+              srcset="{{ cover_base }}?w=80&auto=format,compress 1x, {{ cover_base }}?w=160&auto=format,compress 2x"
+              alt="Copertina di {{ entry.title }}" class="catalog-cover" loading="lazy" />
+            {% endif %}
             {% endif %}
           </td>
           <td>{{ entry.title }}</td>

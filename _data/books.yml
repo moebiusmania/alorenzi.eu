@@ -328,15 +328,15 @@
   finished: '2025-11-07'
   cover: books/il-grido-della-rosa.jpg
   rating: 0
-- title: The Garden of Rama
+- title: Il giardino di Rama
   genre: Fantascienza
   creator: Arthur C. Clarke, Gentry Lee
   finished: '2025-04-19'
-  cover: books/the-garden-of-rama.jpg
+  cover: books/il-giardino-di-rama.jpg
   rating: 0
-- title: 'Rama II (Rama, #2)'
+- title: Rama II
   genre: Fantascienza
   creator: Arthur C. Clarke, Gentry Lee
   finished: '2025-03-19'
-  cover: books/rama-ii-rama-2.jpg
+  cover: books/rama-ii.jpg
   rating: 0

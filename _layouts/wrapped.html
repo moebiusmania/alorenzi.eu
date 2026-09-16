@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}it{% endif %}">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Il mio anno di letture: {{ page.year }}" />
+  <title>{{ page.title }} | Alessandro Lorenzi</title>
+  <link href="/media/site-screen.css" type="text/css" rel="stylesheet" media="screen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <div class="head">
+    <a href="/">Alessandro Lorenzi</a>
+  </div>
+  <div class="mainbody wrapped">
+
+    {%- assign year = page.year -%}
+    {%- assign prev_year = year | plus: 0 | minus: 1 | append: "" -%}
+    {%- assign books = site.data.books | where_exp: "b", "b.finished" -%}
+    {%- assign entries = books | where_exp: "b", "b.finished contains year" | sort: "finished" -%}
+    {%- assign prev_entries = books | where_exp: "b", "b.finished contains prev_year" -%}
+    {%- assign total = entries | size -%}
+    {%- assign prev_total = prev_entries | size -%}
+
+    <p class="wrapped-kicker">Il mio anno di letture</p>
+    <h1 class="wrapped-year">{{ year }}</h1>
+
+    {% if total == 0 %}
+    <p><em>Nessun libro finito nel {{ year }}.</em></p>
+    {% else %}
+
+    <section class="wrapped-hero">
+      <p class="wrapped-number">{{ total }}</p>
+      <p class="wrapped-label">libri finiti</p>
+      {% if prev_total > 0 %}
+      {% assign delta = total | minus: prev_total %}
+      <p class="wrapped-note">
+        {% if delta > 0 %}{{ delta }} in più del {{ prev_year }}{% elsif delta < 0 %}{{ delta | times: -1 }} in meno del {{ prev_year }}{% else %}esattamente come nel {{ prev_year }}{% endif %}
+        <span class="wrapped-dim">({{ prev_total }} libri)</span>
+      </p>
+      {% endif %}
+    </section>
+
+    <section class="wrapped-section">
+      <h2>Tutte le copertine</h2>
+      <div class="wrapped-grid">
+        {% for entry in entries reversed %}
+        <figure class="wrapped-cover" title="{{ entry.title }} - {{ entry.creator }}">
+          {% if entry.cover and entry.cover != "" %}
+          {% include cover.html entry=entry width=140 class="wrapped-cover-img" %}
+          {% else %}
+          <span class="wrapped-cover-missing">{{ entry.title }}</span>
+          {% endif %}
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="wrapped-section">
+      <h2>Mese per mese</h2>
+      {%- assign by_month = entries | group_by_exp: "b", "b.finished | slice: 5, 2" -%}
+      {%- assign ranked_months = by_month | sort: "size" -%}
+      {%- assign peak = ranked_months | last -%}
+      {%- assign month_names = "gennaio,febbraio,marzo,aprile,maggio,giugno,luglio,agosto,settembre,ottobre,novembre,dicembre" | split: "," -%}
+      <ul class="wrapped-bars">
+        {% for name in month_names %}
+        {%- assign idx = forloop.index -%}
+        {%- assign key = "" -%}
+        {%- if idx < 10 -%}{%- assign key = "0" | append: idx -%}{%- else -%}{%- assign key = idx | append: "" -%}{%- endif -%}
+        {%- assign count = 0 -%}
+        {%- for group in by_month -%}{%- if group.name == key -%}{%- assign count = group.size -%}{%- endif -%}{%- endfor -%}
+        <li>
+          <span class="wrapped-bar-label">{{ name }}</span>
+          <span class="wrapped-bar-track">
+            <span class="wrapped-bar-fill" style="width: {% if peak.size > 0 %}{{ count | times: 100 | divided_by: peak.size }}{% else %}0{% endif %}%"></span>
+          </span>
+          <span class="wrapped-bar-value">{{ count }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {%- assign peak_idx = peak.name | plus: 0 | minus: 1 -%}
+      <p class="wrapped-note">Mese più intenso: <strong>{{ month_names[peak_idx] }}</strong>, {{ peak.size }} libri.</p>
+    </section>
+
+    <section class="wrapped-section">
+      <h2>Generi</h2>
+      {%- assign by_genre = entries | group_by: "genre" | sort: "size" | reverse -%}
+      {%- assign top_genre = by_genre | first -%}
+      {%- assign genre_pct = top_genre.size | times: 100 | divided_by: total -%}
+      <p class="wrapped-lead">
+        <strong>{{ top_genre.name }}</strong>: {{ top_genre.size }} libri su {{ total }}, il {{ genre_pct }}% dell'anno.
+      </p>
+      <ul class="wrapped-bars">
+        {% for group in by_genre %}
+        <li>
+          <span class="wrapped-bar-label">{{ group.name }}</span>
+          <span class="wrapped-bar-track">
+            <span class="wrapped-bar-fill" style="width: {{ group.size | times: 100 | divided_by: top_genre.size }}%"></span>
+          </span>
+          <span class="wrapped-bar-value">{{ group.size }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="wrapped-section">
+      <h2>Autori dell'anno</h2>
+      {%- assign by_author = entries | group_by: "creator" | sort: "size" | reverse -%}
+      <ol class="wrapped-podium">
+        {% for group in by_author limit: 5 %}
+        {% if group.size > 1 or forloop.index == 1 %}
+        <li>
+          <div class="wrapped-podium-covers">
+            {% for entry in group.items %}{% if entry.cover and entry.cover != "" %}{% include cover.html entry=entry width=100 class="wrapped-podium-img" %}{% endif %}{% endfor %}
+          </div>
+          <p class="wrapped-podium-name">{{ group.name }}</p>
+          <p class="wrapped-dim">{{ group.size }} libr{% if group.size == 1 %}o{% else %}i{% endif %}</p>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ol>
+    </section>
+
+    {%- assign best = entries | where: "rating", 5 -%}
+    {% if best.size > 0 %}
+    <section class="wrapped-section">
+      <h2>I cinque stelle</h2>
+      <div class="wrapped-best">
+        {% for entry in best %}
+        <figure class="wrapped-best-item">
+          {% if entry.cover and entry.cover != "" %}
+          {% include cover.html entry=entry width=180 class="wrapped-best-img" %}
+          {% endif %}
+          <figcaption>
+            <strong>{{ entry.title }}</strong><br />
+            <span class="wrapped-dim">{{ entry.creator }}</span>
+          </figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% endif %}
+
+    <p class="wrapped-back"><a href="/libri.html">Tutti i libri</a></p>
+  </div>
+</body>
+
+</html>

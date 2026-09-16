@@ -32,7 +32,7 @@
   creator: Stefano Lo Cigno, Uketsu
   finished: '2026-07-13'
   cover: books/strani-disegni.jpg
-  rating: 0
+  rating: 5
 - title: La morte di Ivan Il’ič
   creator: Lev Tolstoj
   finished: '2026-07-06'
@@ -57,17 +57,17 @@
   creator: Sebastian Fitzek
   finished: '2026-06-12'
   cover: books/mimica.jpg
-  rating: 0
+  rating: 5
 - title: Guida galattica per gli autostoppisti
   creator: Douglas Adams
   finished: '2026-05-29'
   cover: books/guida-galattica-per-gli-autostoppisti.jpg
-  rating: 0
+  rating: 5
 - title: Buio
   creator: Vera Buck
   finished: '2026-05-23'
   cover: books/buio.jpg
-  rating: 0
+  rating: 5
 - title: The Bullet Journal Method
   creator: Ryder Carroll
   finished: '2026-05-20'
@@ -107,7 +107,7 @@
   creator: Raffaele Scarabelli
   finished: '2026-04-08'
   cover: books/la-dieta-della-vita-vera.jpg
-  rating: 0
+  rating: 5
 - title: Perfect Day
   creator: Romy Hausmann
   finished: '2026-04-07'

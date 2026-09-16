@@ -32,6 +32,7 @@
           <th>Copertina</th>
           <th>Titolo</th>
           <th>{{ page.creator_label | default: "Autore" }}</th>
+          {% if page.genre_label %}<th>{{ page.genre_label }}</th>{% endif %}
           <th>Finito il</th>
           <th>Voto</th>
         </tr>
@@ -53,6 +54,7 @@
           </td>
           <td>{{ entry.title }}</td>
           <td>{{ entry.creator }}</td>
+          {% if page.genre_label %}<td>{{ entry.genre }}</td>{% endif %}
           <td>{% if entry.finished %}{{ entry.finished | date: "%d/%m/%Y" }}{% endif %}</td>
           <td>
             {% if entry.rating and entry.rating > 0 %}

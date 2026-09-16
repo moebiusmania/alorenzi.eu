@@ -1,284 +1,341 @@
 - title: Solaris
+  genre: Fantascienza
   creator: Stanisław Lem
   finished: '2026-09-16'
   cover: books/solaris.jpg
   rating: 4
 - title: 'Perché nessuno me l''ha detto prima?'
+  genre: Crescita personale
   creator: Julie Smith
   finished: '2026-08-31'
   cover: books/perche-nessuno-me-l-ha-detto-prima.jpg
   rating: 4
 - title: Praticamente innocuo
+  genre: Fantascienza
   creator: Douglas Adams
   finished: '2026-08-10'
   cover: books/praticamente-innocuo.jpg
   rating: 0
 - title: Addio, e grazie per tutto il pesce
+  genre: Fantascienza
   creator: Douglas Adams
   finished: '2026-08-03'
   cover: books/addio-e-grazie-per-tutto-il-pesce.jpg
   rating: 0
 - title: La vita, l'universo e tutto quanto
+  genre: Fantascienza
   creator: Douglas Adams
   finished: '2026-07-19'
   cover: books/la-vita-l-universo-e-tutto-quanto.jpg
   rating: 0
 - title: Il cacciatore di occhi
+  genre: Thriller
   creator: Sebastian Fitzek
   finished: '2026-07-12'
   cover: books/il-cacciatore-di-occhi.jpg
   rating: 0
 - title: Strani disegni
+  genre: Thriller
   creator: Stefano Lo Cigno, Uketsu
   finished: '2026-07-13'
   cover: books/strani-disegni.jpg
   rating: 5
 - title: La morte di Ivan Il’ič
+  genre: Narrativa
   creator: Lev Tolstoj
   finished: '2026-07-06'
   cover: books/la-morte-di-ivan-ilic.jpg
   rating: 0
 - title: La mossa del granchio
+  genre: Thriller
   creator: Sandrone Dazieri
   finished: '2026-06-30'
   cover: books/la-mossa-del-granchio.jpg
   rating: 0
 - title: Ristorante al termine dell'universo
+  genre: Fantascienza
   creator: Douglas Adams
   finished: '2026-06-21'
   cover: books/ristorante-al-termine-dell-universo.jpg
   rating: 0
 - title: Uccidi i ricchi
+  genre: Thriller
   creator: Sandrone Dazieri
   finished: '2026-06-17'
   cover: books/uccidi-i-ricchi.jpg
   rating: 0
 - title: Mimica
+  genre: Thriller
   creator: Sebastian Fitzek
   finished: '2026-06-12'
   cover: books/mimica.jpg
   rating: 5
 - title: Guida galattica per gli autostoppisti
+  genre: Fantascienza
   creator: Douglas Adams
   finished: '2026-05-29'
   cover: books/guida-galattica-per-gli-autostoppisti.jpg
   rating: 5
 - title: Buio
+  genre: Thriller
   creator: Vera Buck
   finished: '2026-05-23'
   cover: books/buio.jpg
   rating: 5
 - title: The Bullet Journal Method
+  genre: Crescita personale
   creator: Ryder Carroll
   finished: '2026-05-20'
   cover: books/the-bullet-journal-method.jpg
   rating: 0
 - title: Il poliziotto del formaggio
+  genre: Umorismo
   creator: TurboPaolo
   finished: '2026-05-16'
   cover: books/il-poliziotto-del-formaggio.jpg
   rating: 0
 - title: La principessa di ghiaccio
+  genre: Giallo
   creator: Camilla Läckberg
   finished: '2026-05-08'
   cover: books/la-principessa-di-ghiaccio.jpg
   rating: 0
 - title: Gratitudine
+  genre: Saggistica
   creator: Oliver Sacks
   finished: '2026-04-23'
   cover: books/gratitudine.jpg
   rating: 5
 - title: La mamma si è addormentata
+  genre: Thriller
   creator: Romy Hausmann
   finished: '2026-04-22'
   cover: books/la-mamma-si-e-addormentata.jpg
   rating: 0
 - title: La mia prediletta
+  genre: Thriller
   creator: Romy Hausmann, Alida Daniele
   finished: '2026-04-17'
   cover: books/la-mia-prediletta.jpg
   rating: 0
 - title: Sogni di robot
+  genre: Fantascienza
   creator: Isaac Asimov
   finished: '2026-04-18'
   cover: books/sogni-di-robot.jpg
   rating: 0
 - title: La Dieta della Vita Vera
+  genre: Saggistica
   creator: Raffaele Scarabelli
   finished: '2026-04-08'
   cover: books/la-dieta-della-vita-vera.jpg
   rating: 5
 - title: Perfect Day
+  genre: Thriller
   creator: Romy Hausmann
   finished: '2026-04-07'
   cover: books/perfect-day.jpg
   rating: 0
 - title: Il gatto del Dalai Lama e il risveglio del gattino interiore
+  genre: Spiritualità
   creator: David Michie
   finished: '2026-04-05'
   cover: books/il-gatto-del-dalai-lama-e-il-risveglio-del-gattino-interiore.jpg
   rating: 0
 - title: La casa dei cadaveri
+  genre: Thriller
   creator: Jeneva Rose
   finished: '2026-03-26'
   cover: books/la-casa-dei-cadaveri.jpg
   rating: 4
 - title: Il gatto del Dalai Lama e l'arte di fare le fusa
+  genre: Spiritualità
   creator: David Michie
   finished: '2026-03-19'
   cover: books/il-gatto-del-dalai-lama-e-l-arte-di-fare-le-fusa.jpg
   rating: 0
 - title: Il gatto del Dalai Lama
+  genre: Spiritualità
   creator: David Michie
   finished: '2026-03-15'
   cover: books/il-gatto-del-dalai-lama.jpg
   rating: 0
 - title: Labirinti
+  genre: Thriller
   creator: Franck Thilliez
   finished: '2026-02-28'
   cover: books/labirinti.jpg
   rating: 0
 - title: C'era due volte
+  genre: Thriller
   creator: Franck Thilliez
   finished: '2026-02-17'
   cover: books/c-era-due-volte.jpg
   rating: 0
 - title: Il manoscritto
+  genre: Thriller
   creator: Franck Thilliez
   finished: '2026-02-09'
   cover: books/il-manoscritto.jpg
   rating: 0
 - title: Il cerchio dei giorni
+  genre: Storico
   creator: Ken Follett
   finished: '2026-01-31'
   cover: books/il-cerchio-dei-giorni.jpg
   rating: 0
 - title: Miti del Nord. Volume 2
+  genre: Fumetto
   creator: Neil Gaiman, P. Craig Russell
   finished: '2026-01-26'
   cover: books/miti-del-nord-volume-2.jpg
   rating: 0
 - title: Alaska
+  genre: Romance
   creator: Brenda Novak
   finished: '2026-01-26'
   cover: books/alaska.jpg
   rating: 4
 - title: Il cuore dell'insegnamento del Buddha
+  genre: Spiritualità
   creator: Hanh Nhat Thich
   finished: '2026-01-19'
   cover: books/il-cuore-dell-insegnamento-del-buddha.jpg
   rating: 0
 - title: Miti del Nord. Volume 1
+  genre: Fumetto
   creator: Neil Gaiman, P. Craig Russell
   finished: '2026-01-23'
   cover: books/miti-del-nord-volume-1.jpg
   rating: 5
 - title: Scarafaggi
+  genre: Giallo
   creator: Jo Nesbø
   finished: '2026-01-23'
   cover: books/scarafaggi.jpg
   rating: 0
 - title: Miti del Nord. Volume 3
+  genre: Fumetto
   creator: Neil Gaiman, P. Craig Russell
   finished: '2026-01-17'
   cover: books/miti-del-nord-volume-3.jpg
   rating: 0
 - title: Umane Bugie
+  genre: Thriller
   creator: Romy Hausmann
   finished: '2026-01-10'
   cover: books/umane-bugie.jpg
   rating: 0
 - title: Il pipistrello
+  genre: Giallo
   creator: Jo Nesbø
   finished: '2026-01-06'
   cover: books/il-pipistrello.jpg
   rating: 0
 - title: La bugia dell’orchidea
+  genre: Thriller
   creator: Donato Carrisi
   finished: '2026-01-01'
   cover: books/la-bugia-dellorchidea.jpg
   rating: 0
 - title: Sunrise on the Reaping (a Hunger Games Novel)
+  genre: Fantascienza
   creator: Suzanne Collins
   finished: '2025-01-31'
   cover: books/sunrise-on-the-reaping-a-hunger-games-novel.jpg
   rating: 0
 - title: Murtagh
+  genre: Fantasy
   creator: Christopher Paolini
   finished: '2025-01-09'
   cover: books/murtagh.jpg
   rating: 0
 - title: La pazienza del diavolo
+  genre: Thriller
   creator: Maxime Chattam
   finished: '2025-06-22'
   cover: books/la-pazienza-del-diavolo.jpg
   rating: 0
 - title: Dove vai così di fretta?
+  genre: Spiritualità
   creator: Lama Michel Rinpoche
   finished: '2025-02-05'
   cover: books/dove-vai-cosi-di-fretta.jpg
   rating: 0
 - title: Loro
+  genre: Thriller
   creator: Maxime Chattam
   finished: '2025-03-08'
   cover: books/loro.png
   rating: 0
 - title: 'Slow Productivity: The Lost Art of Accomplishment Without Burnout'
+  genre: Crescita personale
   creator: Cal Newport
   finished: '2024-12-31'
   cover: books/slow-productivity-the-lost-art-of-accomplishment-without-bur.jpg
   rating: 0
 - title: Come vento cucito alla terra
+  genre: Storico
   creator: ''
   finished: '2025-12-28'
   cover: books/come-vento-cucito-alla-terra.jpg
   rating: 0
 - title: Le armi della luce
+  genre: Storico
   creator: Ken Follett
   finished: '2025-12-26'
   cover: books/le-armi-della-luce.webp
   rating: 0
 - title: Il talento degli ormoni
+  genre: Saggistica
   creator: David JP Phillips
   finished: '2025-12-11'
   cover: books/il-talento-degli-ormoni.jpg
   rating: 5
 - title: Una festa in nero
+  genre: Giallo
   creator: Alice Basso
   finished: '2025-12-18'
   cover: books/una-festa-in-nero.jpg
   rating: 0
 - title: Le aquile della notte
+  genre: Giallo
   creator: ''
   finished: '2025-12-18'
   cover: books/le-aquile-della-notte.jpg
   rating: 0
 - title: UNA STELLA SENZA LUCE
+  genre: Giallo
   creator: Alice Basso
   finished: '2025-12-12'
   cover: books/una-stella-senza-luce.jpg
   rating: 0
 - title: Vivere Momento per Momento
+  genre: Spiritualità
   creator: Jon Kabat-Zinn
   finished: '2025-12-12'
   cover: books/vivere-momento-per-momento.jpg
   rating: 5
 - title: Mattatoio n. 5 o La crociata dei bambini
+  genre: Narrativa
   creator: Kurt Vonnegut
   finished: '2025-11-07'
   cover: books/mattatoio-n-5-o-la-crociata-dei-bambini.jpg
   rating: 0
 - title: Il grido della rosa
+  genre: Giallo
   creator: Alice Basso
   finished: '2025-11-07'
   cover: books/il-grido-della-rosa.jpg
   rating: 0
 - title: The Garden of Rama
+  genre: Fantascienza
   creator: Arthur C. Clarke, Gentry Lee
   finished: ''
   cover: books/the-garden-of-rama.jpg
   rating: 0
 - title: 'Rama II (Rama, #2)'
+  genre: Fantascienza
   creator: Arthur C. Clarke, Gentry Lee
   finished: '2025-03-19'
   cover: books/rama-ii-rama-2.jpg

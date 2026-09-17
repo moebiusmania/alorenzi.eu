@@ -64,7 +64,7 @@
   <div class="head">
     <a href="/">Alessandro Lorenzi</a>
   </div>
-  <div class="mainbody">
+  <main class="mainbody">
     <img class="property-cover" src="{{ site.media_url }}{{ listing.cover.src }}?w=1000&h=440&fit=crop&crop=focalpoint&auto=format,compress" alt="{{ listing.cover.alt }}" />
 
     <header class="property-hero">
@@ -131,7 +131,7 @@
       <h2>Dove si trova</h2>
       <div id="map" class="property-map"></div>
     </section>
-  </div>
+  </main>
 
   <script>
     var map = L.map('map').setView([{{ listing.geo.lat }}, {{ listing.geo.lng }}], 18);

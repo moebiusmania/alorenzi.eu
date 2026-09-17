@@ -8,7 +8,8 @@
 {% assign header_avatar = "/avatar-profile.jpg?w=224&h=224&fit=crop&auto=format,compress" %}
 
 <div class="profile-banner">
-  <img class="profile-banner-img" src="{{ site.media_url }}{{ header_banner }}" alt="{{ header_banner_alt }}" />
+  <img class="profile-banner-img" src="{{ site.media_url }}{{ header_banner }}"
+    alt="{{ header_banner_alt }}" fetchpriority="high" loading="eager" />
   <div class="profile-banner-inner">
     <div class="profile-avatar">
       <img src="{{ site.media_url }}{{ header_avatar }}" alt="Alessandro Lorenzi" />

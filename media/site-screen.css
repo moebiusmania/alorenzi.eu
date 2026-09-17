@@ -847,6 +847,10 @@ a:focus-visible {
   margin: 0;
 }
 
+.site-footer-borderless {
+  border-top: none;
+}
+
 @media (max-width: 40em) {
   .wrapped h1.wrapped-year {
     font-size: 4em;

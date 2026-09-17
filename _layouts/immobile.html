@@ -65,7 +65,8 @@
     <a href="/">Alessandro Lorenzi</a>
   </div>
   <main class="mainbody">
-    <img class="property-cover" src="{{ site.media_url }}{{ listing.cover.src }}?w=1000&h=440&fit=crop&crop=focalpoint&auto=format,compress" alt="{{ listing.cover.alt }}" />
+    <img class="property-cover" src="{{ site.media_url }}{{ listing.cover.src }}?w=1000&h=440&fit=crop&crop=focalpoint&auto=format,compress"
+      alt="{{ listing.cover.alt }}" fetchpriority="high" loading="eager" />
 
     <header class="property-hero">
       <h1>{{ listing.title }}</h1>

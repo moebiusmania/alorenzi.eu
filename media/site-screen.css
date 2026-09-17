@@ -833,6 +833,20 @@ a:focus-visible {
   border-top: 1px solid #eee;
 }
 
+.site-footer {
+  max-width: 50em;
+  margin: 4em auto 0;
+  padding: 1.2em 2em 3em;
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
 @media (max-width: 40em) {
   .wrapped h1.wrapped-year {
     font-size: 4em;
